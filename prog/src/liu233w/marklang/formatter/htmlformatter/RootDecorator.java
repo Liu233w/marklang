@@ -1,0 +1,50 @@
+/**
+ * 
+ */
+package liu233w.marklang.formatter.htmlformatter;
+
+import liu233w.marklang.formatter.FormatDecorator;
+import liu233w.marklang.marklangnode.MarklangNode;
+import liu233w.marklang.marklangnode.MarklangRoot;
+
+/**
+ * 负责从 MarklangRoot 节点生成 HTML 格式的字符串。 如果当前节点为 MarklangRoot 将不理会内层装饰器的返回值。
+ * 
+ * @author Liu233w
+ *
+ */
+public class RootDecorator extends FormatDecorator {
+
+	/**
+	 * 参见 {@linkplain liu233w.marklang.formatter.FormatDecorator
+	 * FormatDecorator}
+	 * 
+	 * @param nextDecorator
+	 *            下一个装饰器
+	 */
+	public RootDecorator(FormatDecorator nextDecorator) {
+		super(nextDecorator);
+	}
+
+	/*
+	 * （非 Javadoc）
+	 * 
+	 * @see
+	 * liu233w.marklang.formatter.FormatDecorator#FormatNode(java.lang.String,
+	 * liu233w.marklang.marklangnode.MarklangNode)
+	 */
+	@Override
+	public String FormatNode(String prevStr, MarklangNode node) {
+		String innerResult = super.nextDecorator.FormatNode(prevStr, node);
+		if (node instanceof MarklangRoot) {
+			MarklangRoot workNode = (MarklangRoot) node;
+			String result = "<!doctype html><html><head><meta charset=\"utf-8\"><title>";
+			result += workNode.getTitle() + "</title></head><body>";
+			result += prevStr + "</body></html>";
+			return result;
+		} else {
+			return innerResult;
+		}
+	}
+
+}

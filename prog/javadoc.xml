@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" additionalparam=" -encoding UTF-8 -charset UTF-8" author="true" classpath="." destdir="doc" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="liu233w,liu233w.marklang.formatter.marklangformatter,liu233w.marklang.marklangnode,liu233w.marklang.formatter,liu233w.marklang" source="1.8" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

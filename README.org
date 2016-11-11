@@ -1,0 +1,43 @@
+#+TITLE: Marklang
+#+AUTHOR: 14011501 刘书敏 2015303087
+
+* 简介
+marklang 既指一个简易标记语言（其实是一个自创的 markdown 的简化版），又指这个语
+言的语法分析与代码转换工具。
+
+* 目录结构：
+- [[file:requirement.html][requirement.html]] :: 需求与需求分析（顺带项目介绍）
+- [[file:class.png][class.png]] :: 类图
+- prog :: 程序的主目录
+  - test.ml :: 一个 Marklang 源文件，可以用作测试使用
+  - [[file:prog/doc/index.html][doc/index.html]] :: 文档入口
+  - src :: 源代码入口
+  - bin :: 编译出的字节码文件
+- .git :: 本项目使用了 git 作为版本控制工具
+
+注意 HTML 格式的文件是正式的文档，org 文件是文档的源代码，为生成 HTML 之用。
+
+* 其他
+本项目的代码量：
+#+BEGIN_EXAMPLE
+d:\Sources\GitHub\marklang>cloc .
+     169 text files.
+     169 unique files.
+      48 files ignored.
+
+github.com/AlDanial/cloc v 1.70  T=0.50 s (318.0 files/s, 50204.0 lines/s)
+-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+HTML                           117            142           4870          17603
+Java                            38            217            853            794
+CSS                              1             10             31            533
+JavaScript                       1              1              0             29
+OCaml                            1              0              0             13
+XML                              1              0              0              6
+-------------------------------------------------------------------------------
+SUM:                           159            370           5754          18978
+-------------------------------------------------------------------------------
+#+END_EXAMPLE
+
+总耗时：10.5 小时
