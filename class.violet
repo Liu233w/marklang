@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_77" class="java.beans.XMLDecoder">
+<java version="1.8.0_66" class="java.beans.XMLDecoder">
  <object class="com.horstmann.violet.ClassDiagramGraph">
   <void method="addNode">
    <object class="com.horstmann.violet.PackageNode" id="PackageNode0">
@@ -64,7 +64,7 @@
         <void property="attributes">
          <void property="text">
           <string>- formatDecorator : FormatDecorator
-- &lt;static&gt; currentFormatter : Marklang </string>
+- &lt;static&gt; currentFormatter : MarklangFormatter</string>
          </void>
         </void>
         <void property="methods">
@@ -192,7 +192,7 @@
      <object class="com.horstmann.violet.ClassNode" id="ClassNode5">
       <void property="attributes">
        <void property="text">
-        <string>- nextDecorator : FormatDecorator</string>
+        <string># nextDecorator : FormatDecorator</string>
        </void>
       </void>
       <void property="methods">
@@ -445,6 +445,13 @@
         <string>- content : String</string>
        </void>
       </void>
+      <void property="methods">
+       <void property="text">
+        <string>+ getContent (): String
++ setContent (String): void
+</string>
+       </void>
+      </void>
       <void property="name">
        <void property="text">
         <string>MarklangContent</string>
@@ -458,6 +465,14 @@
        <void property="text">
         <string>- title : String
 - contents : ArrayList&lt;MarklangNode&gt;</string>
+       </void>
+      </void>
+      <void property="methods">
+       <void property="text">
+        <string>+ getTitle (): String
++ setTitle (String): void
++ getContents (): ArrayList&lt;MarklangNode&gt;
+</string>
        </void>
       </void>
       <void property="name">
@@ -490,6 +505,15 @@
 - titleLevel : int</string>
        </void>
       </void>
+      <void property="methods">
+       <void property="text">
+        <string>+ getTitle (): String
++ setTitle (String): void
++ getContents (): ArrayList&lt;MarklangNode&gt;
++ getTitleLevel (): int
++ setTitleLevel (int): void</string>
+       </void>
+      </void>
       <void property="name">
        <void property="text">
         <string>MarklangTitle</string>
@@ -502,6 +526,12 @@
       <void property="attributes">
        <void property="text">
         <string>- quoteString : ArrayList&lt;String&gt;</string>
+       </void>
+      </void>
+      <void property="methods">
+       <void property="text">
+        <string>+ getQuoteString (): ArrayList&lt;String&gt;
+</string>
        </void>
       </void>
       <void property="name">
@@ -530,14 +560,14 @@
       <string>width</string>
       <void method="set">
        <object idref="Rectangle2D$Double5"/>
-       <double>700.0</double>
+       <double>740.0</double>
       </void>
      </void>
      <void class="java.awt.geom.Rectangle2D$Double" method="getField">
       <string>height</string>
       <void method="set">
        <object idref="Rectangle2D$Double5"/>
-       <double>360.0</double>
+       <double>440.0</double>
       </void>
      </void>
     </void>
@@ -599,19 +629,19 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double8"/>
-      <double>1270.0</double>
+      <double>1340.0</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point2D$Double8"/>
-      <double>450.0</double>
+      <double>470.0</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>1270.0</double>
-     <double>450.0</double>
+     <double>1340.0</double>
+     <double>470.0</double>
     </void>
    </object>
   </void>
@@ -939,19 +969,19 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double20"/>
-      <double>580.0</double>
+      <double>590.0</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point2D$Double20"/>
-      <double>110.0</double>
+      <double>90.0</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>580.0</double>
-     <double>110.0</double>
+     <double>590.0</double>
+     <double>90.0</double>
     </void>
    </object>
   </void>
@@ -1040,14 +1070,14 @@
       <string>x</string>
       <void method="set">
        <object idref="Rectangle2D$Double9"/>
-       <double>1190.0</double>
+       <double>1220.0</double>
       </void>
      </void>
      <void class="java.awt.geom.Rectangle2D$Double" method="getField">
       <string>y</string>
       <void method="set">
        <object idref="Rectangle2D$Double9"/>
-       <double>400.0</double>
+       <double>410.0</double>
       </void>
      </void>
      <void class="java.awt.geom.Rectangle2D$Double" method="getField">
@@ -1063,7 +1093,7 @@
     </void>
     <void property="text">
      <void property="text">
-      <string>继承+包含</string>
+      <string>继承+关联</string>
      </void>
     </void>
    </object>
@@ -1072,19 +1102,19 @@
      <string>x</string>
      <void method="set">
       <object idref="Point2D$Double23"/>
-      <double>1190.0</double>
+      <double>1220.0</double>
      </void>
     </void>
     <void class="java.awt.geom.Point2D$Double" method="getField">
      <string>y</string>
      <void method="set">
       <object idref="Point2D$Double23"/>
-      <double>400.0</double>
+      <double>410.0</double>
      </void>
     </void>
     <void method="setLocation">
-     <double>1190.0</double>
-     <double>400.0</double>
+     <double>1220.0</double>
+     <double>410.0</double>
     </void>
    </object>
   </void>
@@ -1159,7 +1189,7 @@
     </void>
     <void property="text">
      <void property="text">
-      <string>只有包含</string>
+      <string>只有关联</string>
      </void>
     </void>
    </object>
