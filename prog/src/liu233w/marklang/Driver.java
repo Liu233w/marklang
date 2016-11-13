@@ -67,6 +67,7 @@ public class Driver {
 
 			if (index == 0) {
 				stdOut.println("\n感谢使用本程序");
+				stdOut.flush();
 				break;
 			} else {
 				handleOutput(formatterList.get(index - 1).second);
